@@ -1,24 +1,28 @@
 {
-	"name": "leetcode-tracker",
-	"type": "module",
-	"version": "0.0.1",
-	"engines": {
-		"node": ">=22.12.0"
-	},
-	"scripts": {
-		"dev": "astro dev",
-		"build": "astro build",
-		"preview": "astro build && astro preview",
-		"astro": "astro",
-		"generate-types": "wrangler types",
-		"deploy": "astro build && wrangler deploy",
-		"cf-typegen": "wrangler types"
-	},
-	"dependencies": {
-		"@astrojs/cloudflare": "^14.1.2",
-		"astro": "^7.0.7"
-	},
-	"devDependencies": {
-		"wrangler": "^4.110.0"
-	}
+    "name": "leetcode-tracker",
+    "type": "module",
+    "version": "0.0.1",
+    "engines": {
+        "node": ">=22.12.0"
+    },
+    "scripts": {
+        "dev": "NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-certificates.crt astro dev",
+        "build": "astro build",
+        "preview": "astro build && astro preview",
+        "astro": "astro",
+        "generate-types": "wrangler types",
+        "deploy": "astro build && wrangler deploy",
+        "cf-typegen": "wrangler types"
+    },
+    "dependencies": {
+        "@astrojs/cloudflare": "^14.1.2",
+        "@tailwindcss/vite": "^4.3.2",
+        "astro": "^7.0.7",
+        "daisyui": "^5.6.18",
+        "leetcode-query": "^2.0.1",
+        "tailwindcss": "^4.3.2"
+    },
+    "devDependencies": {
+        "wrangler": "^4.110.0"
+    }
 }
