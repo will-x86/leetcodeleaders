@@ -1,0 +1,32 @@
+---
+import type { Daily } from "../api";
+interface Props {
+    daily: Daily;
+}
+const { daily } = Astro.props;
+const badge =
+    { Hard: "badge-error", Easy: "badge-success" }[daily.question.difficulty] ??
+    "badge-warning";
+---
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h2 class="card-title">
+            {daily.question.questionFrontendId}. {daily.question.title}
+        </h2>
+        <span class=`badge ${badge}`>{daily.question.difficulty}</span>
+        <p>
+            {daily.date}
+            <span class="text-xs ml-2">(YYYY-MM-DD)</span>
+        </p>
+
+        <p>Acceptance: {daily.question.acRate.toFixed(1)}%</p>
+        <div class="card-actions">
+            <a
+                href={"https://leetcode.com" + daily.link}
+                target="_blank"
+                class="btn btn-primary">burton</a
+            >
+        </div>
+    </div>
+</div>
