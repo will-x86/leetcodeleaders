@@ -51,7 +51,9 @@ interface Calendar {
         <div>
             <h2 class="card-title">{sub.username}</h2>
             <p>{sub.total_solved} solved</p>
-            <p>
+            <p
+                class=`${solvedDaily ? "text-primary-content" : "text-secondary-content"}`
+            >
                 Daily
                 {solvedDaily ? " solved" : " not solved"}
             </p>
@@ -68,7 +70,7 @@ interface Calendar {
             </div>
         </div>
         <img
-            class=`w-30 ${solvedDaily ? "aura" : ""}`
+            class=`w-30 ${solvedDaily ? "aura aura-rainbow" : ""}`
             alt="Random cat picture from catass.com"
             src={`https://cataas.com/cat/says/${sub.username}?fontSize=20&height=200&width=200`}
         />

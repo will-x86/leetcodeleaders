@@ -8,9 +8,13 @@ let daily: Daily = await getDaily();
 ---
 
 <Layout>
-    <D daily={daily} />
-    <User user="VeryCoolPatrick" daily={daily} />
-    <User user="willx86" daily={daily} />
-    <User user="user8343Sz" daily={daily} />
-    <User user="user0660oo" daily={daily} />
+    <div class="space-y-6">
+        <D daily={daily} />
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <User user="VeryCoolPatrick" daily={daily} />
+            <User user="willx86" daily={daily} />
+            <User user="user8343Sz" daily={daily} />
+            <User user="user0660oo" daily={daily} />
+        </div>
+    </div>
 </Layout>
