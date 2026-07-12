@@ -19,7 +19,9 @@ export default defineConfig({
                         style: "normal",
                     },
                     {
-                        src: ["./src/assets/fonts/KunstGrotesk-LightItalic.woff2"],
+                        src: [
+                            "./src/assets/fonts/KunstGrotesk-LightItalic.woff2",
+                        ],
                         weight: "300",
                         style: "italic",
                     },
@@ -29,7 +31,9 @@ export default defineConfig({
                         style: "normal",
                     },
                     {
-                        src: ["./src/assets/fonts/KunstGrotesk-RegularItalic.woff2"],
+                        src: [
+                            "./src/assets/fonts/KunstGrotesk-RegularItalic.woff2",
+                        ],
                         weight: "400",
                         style: "italic",
                     },
@@ -39,7 +43,9 @@ export default defineConfig({
                         style: "normal",
                     },
                     {
-                        src: ["./src/assets/fonts/KunstGrotesk-MediumItalic.woff2"],
+                        src: [
+                            "./src/assets/fonts/KunstGrotesk-MediumItalic.woff2",
+                        ],
                         weight: "500",
                         style: "italic",
                     },
@@ -49,7 +55,9 @@ export default defineConfig({
                         style: "normal",
                     },
                     {
-                        src: ["./src/assets/fonts/KunstGrotesk-BoldItalic.woff2"],
+                        src: [
+                            "./src/assets/fonts/KunstGrotesk-BoldItalic.woff2",
+                        ],
                         weight: "700",
                         style: "italic",
                     },
@@ -59,7 +67,9 @@ export default defineConfig({
                         style: "normal",
                     },
                     {
-                        src: ["./src/assets/fonts/KunstGrotesk-BlackItalic.woff2"],
+                        src: [
+                            "./src/assets/fonts/KunstGrotesk-BlackItalic.woff2",
+                        ],
                         weight: "900",
                         style: "italic",
                     },
@@ -70,5 +80,6 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()],
     },
+    output: "server",
     adapter: cloudflare(),
 });
