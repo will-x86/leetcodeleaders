@@ -26,3 +26,18 @@ export interface TopicTag {
     slug: string;
     nameTranslated: any;
 }
+
+export async function getRandom() {
+    const response = await fetch("https://leetcode-api-pied.vercel.app/random");
+    const random: Random = await response.json();
+    return random;
+}
+
+export interface Random {
+    id: string;
+    frontend_id: string;
+    title: string;
+    title_slug: string;
+    difficulty: string;
+    url: string;
+}

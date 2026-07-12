@@ -1,15 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import D from "../components/Daily.astro";
+import R from "../components/Random.astro";
 import User from "../components/User.astro";
 import type { Daily } from "../api";
-import { getDaily } from "../api";
-let daily: Daily = await getDaily();
+import { getDaily, getRandom } from "../api";
+
+let [daily, random] = await Promise.all([getDaily(), getRandom()]);
 ---
 
 <Layout>
     <div class="space-y-6">
-        <D daily={daily} />
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <D daily={daily} />
+            <R random={random} />
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <User user="VeryCoolPatrick" daily={daily} />
             <User user="willx86" daily={daily} />
