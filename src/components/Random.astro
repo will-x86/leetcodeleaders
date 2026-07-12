@@ -1,0 +1,26 @@
+---
+import type { Random } from "../api";
+interface Props {
+    random: Random;
+}
+const { random } = Astro.props;
+const badge =
+    { Hard: "badge-error", Easy: "badge-success" }[random.difficulty] ??
+    "badge-warning";
+---
+
+<div class="card shadow-sm mb-6">
+    <div class="card-body">
+        <h2 class="card-title">Random ahh question</h2>
+
+        <span class=`badge ${badge}`>{random.difficulty}</span>
+        <p>
+            {random.frontend_id}. {random.title}
+        </p>
+        <div class="card-actions">
+            <a href={random.url} target="_blank" class="btn btn-secondary"
+                >random</a
+            >
+        </div>
+    </div>
+</div>
