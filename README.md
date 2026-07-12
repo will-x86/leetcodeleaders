@@ -1,7 +1,9 @@
 ## Leaderboard thing for leetcode and my frends
 
 
-Deploy via CF workers
+Deployed via CF workers
+
+
 Hard-coded usernames because I am boss
 
 [View](https://leet.willx86.com)
