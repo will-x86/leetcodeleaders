@@ -15,4 +15,5 @@
         "pattern": "leet.willx86.com",
         "custom_domain": true,
     },
+    "workers_dev": false,
 }
